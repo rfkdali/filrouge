@@ -4,10 +4,19 @@ class LiensController < ActionController::Base
 		@liens = Lien.all
 	end
 
+	def new
+		@liens = Lien.new
+	end
+
 	def create
 		@liens = Lien.new(liens_params)
-		@liens.save
-		redirect_to @liens
+
+
+		if @liens.save
+			redirect_to @liens
+		else
+			render 'new'
+		end
 	end
 
 	def show

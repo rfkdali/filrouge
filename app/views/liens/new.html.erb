@@ -1,6 +1,17 @@
 <h1>Nouveau lien</h1>
 
 <%= form_for :liens, url: liens_path do |f| %>
+<!-- errors-->
+ <% if @liens.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@liens.errors.count, "error") %> Empeche le lien de s'enregistrer:</h2>
+    <ul>
+    <% @liens.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
 
   <p>
     <%= f.label :title %><br>
@@ -26,3 +37,5 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+<%= link_to 'Back', liens_path %>
