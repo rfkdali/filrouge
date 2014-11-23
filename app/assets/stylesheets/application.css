@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+ h1{color: rgba(240, 51, 0, 1);}
+ .status{color: green;}
