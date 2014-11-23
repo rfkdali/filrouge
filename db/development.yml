@@ -1,6 +1,0 @@
-development:
-  adapter: postgresql
-  database: filrouge_development
-  pool: 5
-  username: raf
-  password:
