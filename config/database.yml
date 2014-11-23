@@ -13,7 +13,7 @@ test:
   database: filrouge_test
   pool: 5
   username: raf
-  password:
+  password: raf
   host: localhost
 
 production:
