@@ -9,4 +9,6 @@
   = link_to "home", root_path
   = link_to "contact", contact_path
 = yield
+= debug(params) if Rails.env.development?
+= debug(params) if Rails.env.production?
 
