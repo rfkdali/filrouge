@@ -2,15 +2,14 @@
 
 <%= link_to 'New link', new_lien_path %>
 
-<ul>
+
 <% @liens.each do |lien| %>
-	<li>
-		<em><%= lien.created_at.strftime("%m/%d/%Y") %></em>
-		<%= link_to(lien.title, lien_path(lien.id)) %>
-		<%= link_to(lien.description, lien_path(lien.id)) %>
-		<%= link_to(lien.author, lien_path(lien.id)) %>
-		<%= link_to(lien.lien, lien_path(lien.id)) %>
-	</li>
+	<div class="liens">
+		<p><%= lien.created_at.strftime("%m/%d/%Y") %></p>
+
+		<p>Titre : <%= lien.title %></p>
+		<p>Description : <%= lien.description %> </p>
+		<%= link_to(lien.lien, lien_path(lien.id)) %></p>
+	</div>
 <% end %>
-</ul>
 
