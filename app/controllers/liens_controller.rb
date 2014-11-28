@@ -11,7 +11,6 @@ class LiensController < ActionController::Base
 	def create
 		@liens = Lien.new(liens_params)
 
-
 		if @liens.save
 			redirect_to @liens
 		else

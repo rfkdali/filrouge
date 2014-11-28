@@ -2,19 +2,23 @@
 
 <%= form_for :liens, url: liens_path do |f| %>
 <!-- errors-->
- <% if @liens.errors.any? %>
+<% if @liens.errors.any? %>
+  
   <div id="error_explanation">
-    <h2><%= pluralize(@liens.errors.count, "error") %> Empeche le lien de s'enregistrer:</h2>
+    <h2>
+      <%= pluralize(@liens.errors.count, "error") %> empêchent l'enregistrement du lien:
+    </h2>
     <ul>
     <% @liens.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
   </div>
-  <% end %>
+
+<% end %>
 
   <p>
-    <%= f.label "titre" %><br>
+    <%= f.label :title, "titre" %><br>
     <%= f.text_field :title %>
   </p>
 
@@ -24,7 +28,7 @@
   </p>
 
    <p>
-    <%= f.label "Auteur" %><br>
+    <%= f.label :author , "auteur" %><br>
     <%= f.text_field :author %>
   </p>
 
@@ -38,4 +42,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', liens_path %>
+<%= link_to 'retour', liens_path %>
