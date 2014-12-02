@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Courses = Course.create(title: 'Les objets en rails', category: 'rails', content: 'contenu bla bla bla')
+Courses = Course.create(title: 'Les objets en javascript', category: 'javascript', content: 'et ceci est du javascript et bla bla bla et ceci est du javascript et bla bla bla et ceci est du javascript et bla bla bla et ceci est du javascript et bla bla bla et ceci est du javascript et bla bla bla et ceci est du javascript et bla bla bla et ceci est du javascript et bla bla bla ')

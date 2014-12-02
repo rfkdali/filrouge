@@ -1,0 +1,14 @@
+<h1>Ajouter un cours</h1>
+	<%= form_for :courses, url: courses_path do |f| %>
+		<p>
+		<%= f.label :title, 'titre' %><br />
+		<%= f.text_field :title %>
+		</p>
+		<p><%= f.label :category, 'catégorie' %><br />
+		<%= f.text_field :category %>
+		</p>
+		<p><%= f.label :content, 'contenu' %><br />
+		<%= f.text_field :content %>
+
+		<p><%= f.submit 'Envoyer' %></p>
+	<% end %>
