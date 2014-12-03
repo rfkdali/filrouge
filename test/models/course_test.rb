@@ -7,8 +7,4 @@ class CourseTest < ActiveSupport::TestCase
 	  assert_not courses.save, "Saved the post without a title"
   end
 
-  test "should not save course without content" do
-	  courses = Course.new
-	  assert_not courses.save
-  end
 end
