@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :liens
   resources :courses
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
