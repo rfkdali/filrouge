@@ -1,0 +1,9 @@
+<h1>Les cours</h1>
+
+<div class="cours">
+	<% @courses.each do |course| %>
+		<h3><%= course.title %></h3>
+		<i><%= course.category %></i>
+		<p><%= course.content %></p>
+	<% end %>
+</div>

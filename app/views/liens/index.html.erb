@@ -1,0 +1,15 @@
+<h1>Liste des liens</h1>
+
+<%= link_to 'Ajouter un lien', new_lien_path %>
+
+
+<% @liens.each do |lien| %>
+	<div class="liens">
+		<p><%= lien.created_at.strftime("%m/%d/%Y") %></p>
+
+		<p>Titre : <%= lien.title %></p>
+		<p>Description : <%= lien.description %> </p>
+		<%= link_to(lien.lien, lien_path(lien.id)) %></p>
+	</div>
+<% end %>
+
