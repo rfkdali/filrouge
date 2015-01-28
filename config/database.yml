@@ -23,5 +23,5 @@ production:
   pool: 5
   username: raf
   password:
-  url: <%= ENV['APPSDECK_POSTGRESQL_URL'] %>
+  url: <%= ENV['SCALINGO_POSTGRESQL_URL'] %>
 
