@@ -19,9 +19,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: filrouge_production
+  database: <%= ENV['NAME_DB'] %>
   pool: 5
-  username: raf
-  password:
+  username: <%= ENV['USER_DB'] %>
+  password: <%= ENV['BASE_DB'] %>
   url: <%= ENV['SCALINGO_POSTGRESQL_URL'] %>
 
