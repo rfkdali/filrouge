@@ -1,7 +1,7 @@
 class CoursesController < ActionController::Base
 
 	def index
-		@courses = Course.all
+		@courses = Course.order('id ASC')
 	end
 
 	def new
@@ -13,7 +13,7 @@ class CoursesController < ActionController::Base
 		if @courses.save
 			redirect_to @courses
 		else
-			render new
+			render 'new'
 		end
 	end
 
@@ -21,10 +21,26 @@ class CoursesController < ActionController::Base
 		@courses = Course.find(params[:id])
 	end
 
-end
+	def edit
+		@courses = Course.find(params[:id])
+	end
 
-private 
+
+	def update
+	    @courses = Course.find(params[:id])
+	    if @courses.update(courses_params)
+	    	redirect_to courses_path
+	    else
+	      render 'edit'
+	    end
+  	end
+
+
+
+	private 
 
 	def courses_params
 		params.require(:courses).permit(:title, :category, :content)
 	end
+
+end

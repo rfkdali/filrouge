@@ -18,13 +18,28 @@ class LiensController < ActionController::Base
 		end
 	end
 
+	def edit
+		@liens = Lien.find(params[:id])
+	end
+
 	def show
 	  @liens = Lien.find(params[:id])
 	end
 
+	def update
+	    @liens = Lien.find(params[:id])
+
+	    if @liens.update(liens_params)
+	    	redirect_to liens_path
+	    else
+	      render 'edit'
+	    end
+  	end
+
 	private
+	
 	def liens_params
-		params.require(:liens).permit(:title, :description, :author, :lien)
+		params.require(:liens).permit(:title, :description, :author, :link)
 	end
 
 end

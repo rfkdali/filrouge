@@ -5,6 +5,6 @@ class Lien < ActiveRecord::Base
                     length: { minimum: 5 }
     validates :author, presence: true,
                     length: { minimum: 2 }
-    validates :lien, presence: true,
+    validates :link, presence: true,
                     length: { minimum: 5 }
 end

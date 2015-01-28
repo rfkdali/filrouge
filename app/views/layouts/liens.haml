@@ -1,12 +1,13 @@
 %html{:lang => 'fr'}
 %head
-  %title
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  = csrf_meta_tags
+	%title
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
 %body
 %nav
-  = link_to "home", root_path
-  = link_to "contact", contact_path
-= yield
+	= link_to "home", root_path
+	= link_to "contact", contact_path
+%main 
+	= yield
 
