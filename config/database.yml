@@ -17,5 +17,5 @@ test:
   host: localhost
 
 production:
-  url: <%= :$SCALINGO_POSTGRESQL_URL %>
+  url: <%= ENV["DATABASE_URL"] %>
 
