@@ -1,4 +1,5 @@
 class CoursesController < ActionController::Base
+	layout 'application'
 
 	def index
 		@courses = Course.order('id ASC')

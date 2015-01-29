@@ -1,6 +1,6 @@
 <h3>Liste des liens</h3>
 
-<%= link_to 'Ajouter un lien', new_lien_path, {:class => "add-link"} %>
+<%= link_to 'Ajouter un lien', new_lien_path, {:class => "add-btn btn"} %>
 
 <div id="link_container">
 	<% @liens.each do |lien| %>
@@ -9,7 +9,7 @@
 
 			<p>Titre : <%= lien.title %></p>
 			<!-- <p>Description : <%= lien.description %> </p> -->
-			<%= link_to "description", lien_path(lien.id), {:class => "desc-link"} %></p>
+			<%= link_to "description", lien_path(lien.id), {:class => "desc-btn btn"} %></p>
 		</div>
 	<% end %>
 </div>

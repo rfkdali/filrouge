@@ -1,31 +1,8 @@
 <h1>modification du lien</h1>
 
 <%= form_for :liens, url: lien_path(@liens), method: :patch do |f| %>
-
-
-  <p>
-    <%= f.label :title, "titre" %><br>
-    <%= f.text_field :title %>
-  </p>
-
-   <p>
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </p>
-
-   <p>
-    <%= f.label :author , "auteur" %><br>
-    <%= f.text_field :author %>
-  </p>
-
-  <p>
-    <%= f.label :link %><br>
-    <%= f.text_field :link %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+<%= render 'form' %>
 <% end %>
+
 
 <%= link_to 'retour', liens_path %>

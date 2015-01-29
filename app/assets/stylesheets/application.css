@@ -26,32 +26,48 @@
  .liens{
  	display: inline-block;
  	width: 20%;
+ 	min-width: 250px;
+ 	margin-top: 5px;
+ 	background-color: #E6E6E6;
+ 	padding: 1.25%;
+ 	height: 250px;
+	overflow: hidden;
+ }
+
+ .cours{
+ 	width: auto;
  	margin-top: 5px;
  	background-color: #E6E6E6;
  	padding: 1.25%;
  }
  
-/* Links*/
+/* navbar */
 nav a{
-	background-color: #fff;
+	background-color: #E6E6E6;
  	color: #333;
+ 	padding: 5px;
 }
 
+
+/* Links*/
 a{
 	text-decoration: none;
 	background-color: #164272;
  	color: #fff;
 }
-.add-link{
- 	background-color: #333;
+
+/* buttons */
+
+.btn{
+	text-decoration: none;
+ 	padding: 5px;
  	color: #fff;
- 	text-decoration: none;
- 	padding: 0.5%;
+}
+
+.add-btn{
+ 	background-color: #333;
  }
 
- .desc-link{
+ .desc-btn{
  	background-color: #164272;
- 	color: #fff;
- 	text-decoration: none;
- 	padding: 0.5%;
  }
