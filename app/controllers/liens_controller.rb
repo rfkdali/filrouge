@@ -1,4 +1,5 @@
 class LiensController < ActionController::Base
+	layout 'application'
 
 	def index
 		@liens = Lien.all.order('id ASC')
