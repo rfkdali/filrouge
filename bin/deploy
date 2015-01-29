@@ -5,6 +5,6 @@ BRANCH=`git rev-parse --abbrev-ref HEAD`
 git pull origin $BRANCH && \
 git push origin $BRANCH && \
 
-echo "Mise en ligne sur Heroku" && \
-echo "git push heroku $BRANCH:master" && \
-git push heroku origin $BRANCH:master
+echo "Mise en ligne sur Scalingo" && \
+echo "git push scalingo master" && \
+git push scalingo master
