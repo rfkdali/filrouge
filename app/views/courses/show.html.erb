@@ -2,3 +2,6 @@
 <%= @courses.title %>
 <%= @courses.category %>
 <%= @courses.content %>
+
+<%= link_to 'éditer', edit_course_path, {:class => "btn"} %>
+<%= link_to 'Retour', courses_path, {:class => "btn"}%>
