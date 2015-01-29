@@ -23,5 +23,5 @@ production:
   pool: 5
   username: <%= ENV['USER_DB'] %>
   password: <%= ENV['PASS_DB'] %>
-  url: <%= ENV['SCALINGO_POSTGRESQL_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
