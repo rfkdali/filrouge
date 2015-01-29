@@ -17,11 +17,5 @@ test:
   host: localhost
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: <%= ENV['BASE_DB'] %>
-  pool: 5
-  username: <%= ENV['USER_DB'] %>
-  password: <%= ENV['PASS_DB'] %>
   url: <%= ENV['DATABASE_URL'] %>
 
