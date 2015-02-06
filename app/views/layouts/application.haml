@@ -1,14 +1,22 @@
 %html{:lang => 'fr'}
-%head
-  %title
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  = csrf_meta_tags
-%body
-%nav
-  = link_to "accueil", root_path
-  = link_to "liens intéressants", liens_path
-  = link_to "les cours", courses_path
-  = link_to "contact", contact_path
-= yield
+  %head
+    %title
+      Filrouge Project
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  %header
+    %h3
+      = link_to "LOGO", root_path, id: 'logo'
+    %nav
+      %ul
+        = link_to "accueil", root_path
+        = link_to "objectifs", goals_path
+        = link_to "liens intéressants", liens_path
+        = link_to "les cours", courses_path
+        = link_to "contact", contact_path
+
+  %main
+    = yield
 

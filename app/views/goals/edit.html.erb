@@ -1,0 +1,8 @@
+<h1>modification de l'objectif</h1>
+
+<%= form_for :goals, url: goal_path(@goals), method: :patch do |f| %>
+<%= render 'form' %>
+<% end %>
+
+
+<%= link_to 'retour', goals_path, {:class => "back-btn"} %>

@@ -1,0 +1,35 @@
+<%= form_for :goals, url: goals_path do |f| %>
+<!-- errors-->
+<% if @goals.errors.any? %>
+  
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@goals.errors.count, "error") %> empêchent l'enregistrement de l'objectif:
+    </h2>
+    <ul>
+    <% @goals.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+
+<% end %>
+
+  <p>
+    <%= f.label :title, "titre" %><br>
+    <%= f.text_field :title %>
+  </p>
+
+   <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.check_box :status %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

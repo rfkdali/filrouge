@@ -4,13 +4,10 @@
 
 <div id="main">
 		<% @courses.each do |course| %>
-		<div class="cours">
-			<h3><%= course.title %></h3>
-			<i><%= course.category %></i>
-			<p><%= course.content %></p>
-		</div>
+			<div class="cours">
+				<h3><%= course.title %></h3>
+				<i><%= course.category %></i>
+				<p><%= course.content %></p>
+			</div>
 		<% end %>
 </div>
-
-
-<%= link_to 'Ajouter un cours', new_course_path, {:class => 'btn'} %>

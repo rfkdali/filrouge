@@ -13,61 +13,139 @@
  *= require_tree .
  *= require_self
  */
- body{padding: 1%;}
+ body{
+ 	font-family: arial;
+ 	background-color: #DFF7FF;
+ }
 
  main{
  	margin: 0 auto;
- }
+ 	max-width: 1200px;
+ 	padding: 1%;
+ 	
+ } 
 
- h1{color: #333;}
+/* header */
 
- .status{color: green;}
 
- .liens{
- 	display: inline-block;
- 	width: 20%;
- 	min-width: 250px;
- 	margin-top: 5px;
- 	background-color: #E6E6E6;
- 	padding: 1.25%;
- 	height: 250px;
-	overflow: hidden;
- }
-
- .cours{
- 	width: auto;
- 	margin-top: 5px;
- 	background-color: #E6E6E6;
- 	padding: 1.25%;
- }
- 
-/* navbar */
-nav a{
-	background-color: #E6E6E6;
- 	color: #333;
- 	padding: 5px;
+header{
+	height: 50px;
+	background-color: #333;
+	margin-bottom: 5%;
+	padding: 0 5%;
 }
+
+	header #logo{
+		line-height: 50px;
+		float: left;
+		color: #fff;
+		font-size: 2em;
+	}
+
+/* nav */
+nav{
+	width: auto;
+}
+
+	nav ul{
+		float: right;
+		line-height: 50px;
+	}
+
+	nav a{
+	 	color: #fff;
+	 	padding: 0 1em;
+	}
+	nav a:hover{border-bottom: 5px solid #5F5F5F;}
 
 
 /* Links*/
-a{
-	text-decoration: none;
-	background-color: #164272;
- 	color: #fff;
-}
+a{text-decoration: none;}
 
 /* buttons */
 
 .btn{
 	text-decoration: none;
- 	padding: 5px;
  	color: #fff;
+ 	background-color: rgba(22, 66, 114, 0.86);
+ 	padding: 1%;
 }
 
-.add-btn{
- 	background-color: #333;
- }
+.add-btn{background-color: rgb(218, 124, 64);}
+.edit-btn{background-color: rgb(1, 107, 165);}
+.del-btn{background-color: rgba(254, 46, 30, 0.86);}
 
- .desc-btn{
- 	background-color: #164272;
- }
+.desc-btn{background-color: #164272;}
+
+.back-btn{
+	display: block;
+	width: 2.5em;
+	margin-top: 2%;
+}
+
+
+/* -------*/ 
+
+h1{
+	color: #333;
+	margin-bottom: 2%;
+}
+
+.status{color: green;}
+.date{font-size: 0.8em;}
+
+.liens{
+	display: inline-block;
+	width: 20%;
+	min-width: 250px;
+	margin-top: 5px;
+	background-color: #E6E6E6;
+	padding: 1.25%;
+	height: 250px;
+	overflow: hidden;
+}
+
+.cours{
+	width: auto;
+	margin-top: 5px;
+	background-color: #E6E6E6;
+	padding: 1.25%;
+}
+
+.content{
+	padding: 2%;
+	background-color: #FCCEAC;
+	margin-bottom: 2%;
+}
+
+.goals{
+	padding: 2% 1%;
+	background-color: rgba(0, 101, 105, 0.18);
+	width: 300px;
+	margin-top: 2%;
+}
+
+.goals p{
+	padding: 0.5em 0;
+}
+
+
+
+/* forms */
+input{
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+	border:0.1px solid #ABE7FF;
+	padding: 0.4em;
+}
+
+main input[type="submit"]{
+	display: block;
+	width: 100px;
+	height: 30px;
+	border: 0px none;
+	color: #292929;
+	padding: 1px;
+	background-color: rgba(90, 90, 90, 0.27);
+	margin-bottom: 2%;
+}

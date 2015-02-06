@@ -1,14 +1,13 @@
-<h3>Liste des liens</h3>
+<h1>Liste des liens</h1>
 
 <%= link_to 'Ajouter un lien', new_lien_path, {:class => "add-btn btn"} %>
 
 <div id="link_container">
 	<% @liens.each do |lien| %>
 		<div class="liens">
-			<p><%= lien.created_at.strftime("%m/%d/%Y") %></p>
+			<p class="date"><%= lien.created_at.strftime("%d.%m.%Y") %></p>
 
 			<p>Titre : <%= lien.title %></p>
-			<!-- <p>Description : <%= lien.description %> </p> -->
 			<%= link_to "description", lien_path(lien.id), {:class => "desc-btn btn"} %></p>
 		</div>
 	<% end %>

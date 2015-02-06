@@ -1,0 +1,20 @@
+<h1>Dernier objectif</h1>
+
+<div class="content">	
+	<p>
+	  <strong>Titre:</strong>
+	  <%= @goals.title %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @goals.description %>
+	</p>
+</div>
+
+
+
+<%= link_to 'éditer', edit_goal_path, {:class => "edit-btn"} %>
+<%= link_to 'supprimer', goal_path, {:class => "del-btn btn", :method => "delete"} %>
+
+<p class=""><%= link_to 'retour', goals_path, {:class => "back-btn"}%></p>
