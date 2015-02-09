@@ -5,17 +5,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+
   %body
   %header
     %h3
-      = link_to "LOGO", root_path, id: 'logo'
+      = link_to "Goals", root_path, id: 'logo'
     %nav
       %ul
-        = link_to "accueil", root_path
-        = link_to "objectifs", goals_path
-        = link_to "liens intéressants", liens_path
-        = link_to "les cours", courses_path
-        = link_to "contact", contact_path
+        %li
+          = link_to "accueil", root_path
+        %li
+          = link_to "objectifs", goals_path
+        %li
+          = link_to "objectifs terminés", goals_completed_path 
 
   %main
     = yield

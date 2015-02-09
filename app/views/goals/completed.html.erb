@@ -1,0 +1,9 @@
+<h1>Completed goals</h1>
+
+
+<% Goal.where(:status => 'true').each do |goal| %>
+		<div class="goals completed">
+			<p>Titre : <%= goal.title %></p>
+			<p class="desc"><%= goal.description %></p>
+		</div>
+<% end %>

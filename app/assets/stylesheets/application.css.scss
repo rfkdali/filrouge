@@ -1,0 +1,319 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+ 	font-family: arial;
+ 	background-color: #fff;
+ }
+
+ main{
+ 	margin: 0 auto;
+ 	max-width: 1200px;
+ 	padding: 1%;
+ 	
+ } 
+
+/* header */
+
+
+header{
+	height: 50px;
+	background-color: #333;
+	margin-bottom: 4%;
+	padding: 0 5%;
+}
+
+	header #logo{
+		line-height: 50px;
+		float: left;
+		color: #fff;
+		font-size: 2em;
+	}
+
+/* nav */
+nav{
+	width: auto;
+}
+
+	nav ul{
+		float: right;
+		line-height: 50px;
+	}
+
+	nav li{
+		display: inline-block;
+		padding: 0 1em;
+	}
+
+	nav a{
+		opacity: 0.8;
+	 	color: #ECECEC;
+	 	-webkit-transition: all 0.5s ease; transition: all 0.5s ease;
+	}
+
+
+	nav a:hover{
+		border-bottom: 1px solid rgba(146, 146, 146, 0);
+		opacity: 1;
+		color: #fff;
+	}
+
+
+/* Links*/
+a{text-decoration: none;}
+
+/* buttons */
+
+.btn{
+	text-decoration: none;
+ 	color: #fff;
+ 	background-color: rgba(22, 66, 114, 0.86);
+ 	padding: 1.6%;
+ 	display: inline-block;
+ 	min-width: 42px;
+}
+
+.add-btn{
+	background-color: #E27A3F;
+	border-radius: 3px;
+	padding: 0.6%;
+}
+
+.edit-btn, .del-btn, .back-btn{
+	background-color: #45B29D
+}
+
+.desc-btn{
+	background-color: #164272;
+}
+
+.back-btn{
+	display: block;
+	width: 2.5em;
+	margin-top: 2%;
+	padding: 0.5%;
+	border-radius: 3px;
+}
+
+/* -------*/ 
+
+h1{
+	color: #333;
+	margin-bottom: 30px;
+	font-size: 1.3em
+}
+
+.status{color: green;}
+.date{font-size: 0.8em;}
+
+.liens{
+	display: inline-block;
+	width: 20%;
+	min-width: 250px;
+	margin-top: 5px;
+	background-color: #E6E6E6;
+	padding: 1.25%;
+	height: 250px;
+	overflow: hidden;
+}
+
+.cours{
+	width: auto;
+	margin-top: 5px;
+	background-color: #E6E6E6;
+	padding: 1.25%;
+}
+
+.content{
+	padding: 2%;
+	background-color: #FCCEAC;
+	margin-bottom: 2%;
+}
+
+/*.goals{
+	padding: 2% 1%;
+	background-color: rgba(0, 101, 105, 0.18);
+	width: 300px;
+	margin-top: 2%;
+}*/
+main .completed{
+	background-color: rgba(147, 249, 64, 0.27);
+	min-height: 100px;
+	max-height: 180px;
+}
+
+main .no-completed{
+	background-color: rgba(252, 208, 208, 0.27);
+	min-height: 100px;
+	max-height: 234px;
+}
+
+.goals {
+	display: inline-block;
+	width: 20%;
+	min-width: 250px;
+	/*margin-top: 5px;*/
+	background-color: #F0F0F0;
+	padding: 1.25%;
+	height: 250px;
+	overflow: hidden;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 540px) {
+
+	header{
+		padding: 0;
+	}
+
+	header #logo{
+		display: block;
+		text-align: center;
+		font-size: 2em;
+		width: 100%;
+	}
+
+	main{
+		padding: 0;
+	}
+
+	main h1{
+		text-align: center;
+		line-height: 70px;
+		margin: 0;
+		background-color: #E27A3F;
+
+	}
+
+
+	nav ul{
+		background-color: #333;
+		line-height: 30px;
+		width: 100%;
+		
+	}
+	nav li{
+		display: block;
+		padding: 0 1em;
+		height: 2em;
+		padding: 0;
+		border-bottom: 1px solid rgba(255, 191, 52, 0.33);
+	}
+
+	nav li a{
+		color: #fff;
+		text-align: center;
+		display: block;
+	}
+
+	nav li a:hover{
+		border: 0;
+	}
+
+	.goals {
+		display: block;
+		width: 97.5%;
+		min-width: 250px;
+	}
+
+	p{
+		text-align: center;
+	}
+
+	main .no-completed{
+		max-height: 400px;
+	}
+
+	main .completed{
+		height: 100px;
+	}
+
+	.goals footer{
+		text-align: center;
+	}
+
+
+
+}
+
+/* END MEDIA QUERIES */
+
+
+	.goals p.desc{
+		height: 114px;
+	}
+
+	.goals p.status{
+		margin-top: 1%;
+	}
+
+	.goals p{
+		padding: 0.5em 0;
+	}
+
+	.goals footer{
+		position: relative;
+		top: 1em;
+	}
+
+
+/* forms */
+input{
+	border-radius: 3px;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+	border:0.1px solid #ABE7FF;
+	padding: 0.4em;
+	width: 200px;
+}
+
+textarea{
+	border-radius: 3px;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+	padding: 0.4em;
+	width: 450px;
+	height: 180px;
+}
+
+input[type="submit"]{
+	display: block;
+	width: 100px;
+	height: 30px;
+	border: 0px none;
+	color: #fff;
+	padding: 1px;
+	background-color: #FF8328;
+	margin-bottom: 2%;
+}
+
+textarea, input{
+	border: 4px solid rgba(171, 231, 255, 0.47)
+}
+
+input[type="checkbox"]{
+	width: 58px;
+}
+
+
+
+/*Colors */
+
+.red{
+	color: #FF4B4B;
+}
+

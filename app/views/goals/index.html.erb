@@ -1,16 +1,19 @@
-<h1>Liste des objectifs</h1>
+<h1><span><%= link_to '+ Ajouter un objectif', new_goal_path, {:class => "add-btn btn"} %></span></h1>
 
-<%= link_to 'Ajouter un objectif', new_goal_path, {:class => "add-btn btn"} %>
+
 
 <div id="goal_container">
-	<% @goals.each do |goal| %>
-		<div class="goals">
+	<% Goal.where(:status => 'false').each do |goal| %>
+		<div class="goals no-completed">
 			<p>Titre : <%= goal.title %></p>
-			<p><%= goal.description %></p>
-			<p>statut : <%= goal.status %></p>
+			<p class="desc"><%= goal.description %></p>
+			<p class="red">statut : <%= goal.status %></p>
+			<footer>
 			<%= link_to 'éditer', edit_goal_path(goal), {:class => "edit-btn btn"} %>
 			<%= link_to 'supprimer', goal_path(goal), {:class => "del-btn btn", :method => "delete"}%>
+			</footer>
 		</div>
 	<% end %>
 	<%= link_to 'retour', goals_path, {:class => "back-btn btn"}%>
 </div>
+

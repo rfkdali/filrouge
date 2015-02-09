@@ -27,6 +27,10 @@ class GoalsController < ActionController::Base
 	  @goals = Goal.find(params[:id])
 	end
 
+	def completed
+		@goals = Goal.all.order('id ASC')
+	end
+
 	def update
 	    @goals = Goal.find(params[:id])
 
