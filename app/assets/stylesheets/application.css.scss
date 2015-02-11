@@ -1,30 +1,30 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
- body{
- 	font-family: arial;
- 	background-color: #fff;
- }
+body{
+	font-family: arial;
+	background-color: #fff;
+}
 
- main{
- 	margin: 0 auto;
- 	max-width: 1200px;
- 	padding: 1%;
- 	
- } 
+main{
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 1%;
+	
+} 
 
 /* header */
 
@@ -36,40 +36,40 @@ header{
 	padding: 0 5%;
 }
 
-	header #logo{
-		line-height: 50px;
-		float: left;
-		color: #fff;
-		font-size: 2em;
-	}
+header #logo{
+	line-height: 50px;
+	float: left;
+	color: #fff;
+	font-size: 2em;
+}
 
 /* nav */
 nav{
 	width: auto;
 }
 
-	nav ul{
-		float: right;
-		line-height: 50px;
-	}
+nav ul{
+	float: right;
+	line-height: 50px;
+}
 
-	nav li{
-		display: inline-block;
-		padding: 0 1em;
-	}
+nav li{
+	display: inline-block;
+	padding: 0 1em;
+}
 
-	nav a{
-		opacity: 0.8;
-	 	color: #ECECEC;
-	 	-webkit-transition: all 0.5s ease; transition: all 0.5s ease;
-	}
+nav a{
+	opacity: 0.8;
+	color: #ECECEC;
+	-webkit-transition: all 0.5s ease; transition: all 0.5s ease;
+}
 
 
-	nav a:hover{
-		border-bottom: 1px solid rgba(146, 146, 146, 0);
-		opacity: 1;
-		color: #fff;
-	}
+nav a:hover{
+	border-bottom: 1px solid rgba(146, 146, 146, 0);
+	opacity: 1;
+	color: #fff;
+}
 
 
 /* Links*/
@@ -79,11 +79,11 @@ a{text-decoration: none;}
 
 .btn{
 	text-decoration: none;
- 	color: #fff;
- 	background-color: rgba(22, 66, 114, 0.86);
- 	padding: 1.6%;
- 	display: inline-block;
- 	min-width: 42px;
+	color: #fff;
+	background-color: rgba(22, 66, 114, 0.86);
+	padding: 1.6%;
+	display: inline-block;
+	min-width: 42px;
 }
 
 .add-btn{
@@ -92,8 +92,10 @@ a{text-decoration: none;}
 	padding: 0.6%;
 }
 
-.edit-btn, .del-btn, .back-btn{
-	background-color: #45B29D
+.edit-btn, .del-btn{
+	background-color: #45B29D;
+	border-radius: 3px;
+	padding: 5px;
 }
 
 .desc-btn{
@@ -101,6 +103,7 @@ a{text-decoration: none;}
 }
 
 .back-btn{
+	background-color: #E27A3F;
 	display: block;
 	width: 2.5em;
 	margin-top: 2%;
@@ -141,13 +144,22 @@ h1{
 	padding: 2%;
 	background-color: #FCCEAC;
 	margin-bottom: 2%;
+	width: 600px;
+}
+
+.content p{
+	padding: 2% 0;
+}
+
+h1 span{
+	color : #45B29D;
 }
 
 /*.goals{
-	padding: 2% 1%;
-	background-color: rgba(0, 101, 105, 0.18);
-	width: 300px;
-	margin-top: 2%;
+padding: 2% 1%;
+background-color: rgba(0, 101, 105, 0.18);
+width: 300px;
+margin-top: 2%;
 }*/
 main .completed{
 	background-color: rgba(147, 249, 64, 0.27);
@@ -170,6 +182,33 @@ main .no-completed{
 	padding: 1.25%;
 	height: 250px;
 	overflow: hidden;
+}
+
+/* CATEGORIES */
+.list-category{
+	margin: 1% 0;
+	font-size: 1.1em;
+	color: rgb(69, 178, 157);
+}
+
+
+.list-category li{
+	display: inline-block;
+	margin-right: 0;
+}
+
+.list-category li a{
+	color: #fff;
+	background-color: #334D5C;
+	display: block;
+	width: auto;
+	margin-top: 2%;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.list-category li a:active, .list-category li a:hover{
+	background-color: rgba(69, 178, 157, 0.79);
 }
 
 /* MEDIA QUERIES */
@@ -204,7 +243,7 @@ main .no-completed{
 		background-color: #333;
 		line-height: 30px;
 		width: 100%;
-		
+
 	}
 	nav li{
 		display: block;
@@ -245,30 +284,27 @@ main .no-completed{
 	.goals footer{
 		text-align: center;
 	}
-
-
-
 }
 
 /* END MEDIA QUERIES */
 
 
-	.goals p.desc{
-		height: 114px;
-	}
+.goals p.desc{
+	height: 70px;
+}
 
-	.goals p.status{
-		margin-top: 1%;
-	}
+.goals p.status{
+	margin-top: 1%;
+}
 
-	.goals p{
-		padding: 0.5em 0;
-	}
+.goals p{
+	padding: 0.5em 0;
+}
 
-	.goals footer{
-		position: relative;
-		top: 1em;
-	}
+.goals footer{
+	position: relative;
+	top: 1em;
+}
 
 
 /* forms */

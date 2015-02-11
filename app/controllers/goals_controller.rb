@@ -2,7 +2,11 @@ class GoalsController < ActionController::Base
 	layout 'application'
 
 	def index
-		@goals = Goal.all.order('id ASC')
+		@goals = Goal.to_complete
+		if params[:category]
+			@goals = @goals.where(category: params[:category])
+		end
+		@categories = Goal.categories
 	end
 
 	def new
@@ -28,7 +32,7 @@ class GoalsController < ActionController::Base
 	end
 
 	def completed
-		@goals = Goal.all.order('id ASC')
+		@goals = Goal.completed
 	end
 
 	def update
@@ -51,7 +55,7 @@ class GoalsController < ActionController::Base
 	private
 	
 	def goals_params
-		params.require(:goals).permit(:title, :description, :status)
+		params.require(:goals).permit(:title, :description, :category, :status)
 	end
 
 end

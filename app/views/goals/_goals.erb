@@ -1,0 +1,23 @@
+<ul class="list-category">
+	<li><%= link_to "all", goals_path %></li>
+	<% @categories.each do |category| %>
+	  <li><%= link_to category, goals_path(category: category) %></li>
+	<% end %>
+</ul>
+
+<% @goals.each do |goal| %>
+
+	<div class="goals no-completed">
+		<p>Titre : <%= goal.title %></p>
+		<p class="desc"><%= goal.description %></p>
+		<p class="category">Catégorie : <%= goal.category %></p>
+		<p class="red">statut : <%= goal.status %></p>
+
+		<footer>
+		<%= link_to 'éditer', edit_goal_path(goal), {:class => "edit-btn btn"} %>
+		<%= link_to 'supprimer', goal_path(goal), {:class => "del-btn btn", :method => "delete"}%>
+		</footer>
+
+	</div>
+
+<% end %>

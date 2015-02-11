@@ -25,7 +25,12 @@
     <%= f.text_area :description %>
   </p>
 
-  <p>
+   <p>
+  <%= f.label :category, 'Catégorie' %><br />
+    <%= f.text_field :category %>
+  </p>
+
+   <p>
   <%= f.label :status, 'Statut' %>
     <%= f.check_box :status %>
   </p>
