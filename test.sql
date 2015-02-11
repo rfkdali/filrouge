@@ -37,7 +37,8 @@ CREATE TABLE goals (
     id integer NOT NULL,
     title character varying(255),
     description character varying(255),
-    status boolean
+    status boolean,
+    category character varying(255)
 );
 
 
@@ -86,19 +87,22 @@ ALTER TABLE ONLY goals ALTER COLUMN id SET DEFAULT nextval('goals_id_seq'::regcl
 -- Data for Name: goals; Type: TABLE DATA; Schema: public; Owner: raf
 --
 
-COPY goals (id, title, description, status) FROM stdin;
-13	haml	Mise en place de l'haml	t
-14	Authentification	Mettre en place l'authentification (basicAuth, gem Dotenv)	t
-15	Postgresql	Mettre en place une base de donnée (PostgresQl)	t
-16	formulaire	Mettre en place un formulaire pour l'insertions de liens	t
-17	validations	Ajout validations pour le formulaire	t
-18	Heroku	Créer un compte heroku et y déployer l'appli	t
-19	script de déploiement	Créer un script de déploiement (local > dev et prod)	t
-20	Test	 Mettre en place des tests	t
-22	Test BDD	Mettre en place des tests (BDD avec jasmine-rails/rspec/cucumber)	f
-23	AngularJs	Mettre en place AngularJs	f
-24	MongoDB	Mettre en place une base de données NoSql	f
-21	API	Mettre en place une API	f
+COPY goals (id, title, description, status, category) FROM stdin;
+13	haml	Mise en place de l'haml	t	\N
+14	Authentification	Mettre en place l'authentification (basicAuth, gem Dotenv)	t	\N
+15	Postgresql	Mettre en place une base de donnée (PostgresQl)	t	\N
+16	formulaire	Mettre en place un formulaire pour l'insertions de liens	t	\N
+17	validations	Ajout validations pour le formulaire	t	\N
+18	Heroku	Créer un compte heroku et y déployer l'appli	t	\N
+19	script de déploiement	Créer un script de déploiement (local > dev et prod)	t	\N
+20	Test	 Mettre en place des tests	t	\N
+25	rgregre	ergrege	t	\N
+22	Test BDD	Mettre en place des tests (BDD avec jasmine-rails/rspec/cucumber)	f	implémentation
+23	AngularJs	Mettre en place AngularJs	f	implémentation
+21	API	Mettre en place une API	f	implémentation
+24	MongoDB	Mettre en place une base de données NoSql	f	implémentation
+26	Refaire kata	Refaire Kata WordCount du 11/02	f	Katas
+27	KataPotter	Refaire KataPotter du 09/02	f	Katas
 \.
 
 
@@ -106,7 +110,7 @@ COPY goals (id, title, description, status) FROM stdin;
 -- Name: goals_id_seq; Type: SEQUENCE SET; Schema: public; Owner: raf
 --
 
-SELECT pg_catalog.setval('goals_id_seq', 24, true);
+SELECT pg_catalog.setval('goals_id_seq', 27, true);
 
 
 --
@@ -120,6 +124,7 @@ COPY schema_migrations (version) FROM stdin;
 20150206154544
 20150206173239
 20150207102702
+20150211101145
 \.
 
 
