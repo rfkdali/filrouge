@@ -92,7 +92,13 @@ a{text-decoration: none;}
 	padding: 0.6%;
 }
 
-.edit-btn, .del-btn{
+.del-btn{
+	background-color: #DF5A49;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.edit-btn{
 	background-color: #45B29D;
 	border-radius: 3px;
 	padding: 5px;
