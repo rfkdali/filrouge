@@ -1,7 +1,7 @@
 class GoalsController < ActionController::Base
+http_basic_authenticate_with name: ENV['APP_USER'], password: ENV['APP_PASS']
+	
 	layout 'application'
-
-	http_basic_authenticate_with name: ENV['APP_USER'], password: ENV['APP_PASS']
 
 	def index
 		@goals = Goal.to_complete
