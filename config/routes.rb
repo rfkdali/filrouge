@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'goals#index'
 
   get 'goals/completed' => 'goals#completed'
+  get 'weather' => 'weather#index'
 
   resources :goals
 
