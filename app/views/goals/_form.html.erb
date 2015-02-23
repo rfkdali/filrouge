@@ -1,6 +1,6 @@
 <%= form_for :goals, url: goals_path do |f| %>
 <!-- errors-->
-<% if @goals.errors.any? %>
+  <% if @goals.errors.any? %>
   
   <div id="error_explanation">
     <h2>
@@ -13,7 +13,7 @@
     </ul>
   </div>
 
-<% end %>
+  <% end %>
 
   <p>
     <%= f.label :title, "Titre" %><br>

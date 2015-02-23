@@ -1,10 +1,11 @@
 %html{:lang => 'fr'}
   %head
-    %meta{"HTTP-EQUIV" => "Refresh", "CONTENT" => 5}
+    //%meta{"HTTP-EQUIV" => "Refresh", "CONTENT" => 5}
+    %meta
     %title
       Filrouge Project
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'weather', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
