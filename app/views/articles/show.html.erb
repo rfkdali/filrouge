@@ -1,0 +1,7 @@
+<h1>show</h1>
+	<p>titre : <%= @article.title %></p>
+	<p>contenu : <%= @article.content %></p>
+	<p>tag : <%= @article.tag %></p>
+
+<%= link_to 'acceuil', articles_path %>
+<%= link_to 'éditer', edit_article_path %>

@@ -1,0 +1,14 @@
+<h1>modification de l'article</h1>
+
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+	<p><%= f.label :title, 'Titre' %></p>
+	<p><%= f.text_field :title %></p>
+
+	<p><%= f.label :content, 'Content' %></p>
+	<p><%= f.text_area :content %></p>
+
+	<p><%= f.label :tag, 'Tag' %></p>
+	<p><%= f.text_field :tag %></p>
+
+	<p><%= f.submit 'modifier' %></p>
+<% end %>

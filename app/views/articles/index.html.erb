@@ -1,0 +1,11 @@
+<h1>Blog</h1>
+
+<% @articles.each do |a| %>
+	<p>titre : <%= a.title %><br />
+	contenu : <%= a.content %><br />
+	tag : <%= a.tag %><br />
+	<%= link_to 'éditer', edit_article_path(a) %>
+	</p>
+<% end %>
+
+<%= link_to 'Nouveau article', new_article_path %>
