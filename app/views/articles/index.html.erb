@@ -1,11 +1,25 @@
-<h1>Blog</h1>
+﻿<h1>
+	<span><%= link_to '+ Ajouter un article', new_article_path, {:class => "add-btn btn"} %></span>
+</h1>
 
-<% @articles.each do |a| %>
-	<p>titre : <%= a.title %><br />
-	contenu : <%= a.content %><br />
-	tag : <%= a.tag %><br />
-	<%= link_to 'éditer', edit_article_path(a) %>
-	</p>
-<% end %>
+<div class="index_articles">
+	
 
-<%= link_to 'Nouveau article', new_article_path %>
+		<% @articles.each do |a| %>
+		<div class="articles">
+		<h2>titre : <%= a.title %></h2>
+
+		<p><%= a.created_at.strftime("%d %b %y") %></p>
+		<p><%= articles_content_md_truncated(a) %></p>
+		<p>tag : <%= a.tag %></p>
+
+		<footer>
+			<%= link_to 'Lire la suite', a ,{:class => "more-btn btn"}%>
+			<%= link_to 'éditer', a, {:class => "edit-btn btn"}%>
+		</footer>
+		</div>
+		<% end %>
+	
+	
+
+</div>
