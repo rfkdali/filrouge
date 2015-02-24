@@ -31,6 +31,7 @@ module ApplicationHelper
 	    # block of code
 	    # ```
 	    fenced_code_blocks: true,
+	    disable_indented_code_blocks: true,
 	    # will ignore standard require for empty lines surrounding HTML blocks
 	    lax_spacing:        true,
 	    # will not generate emphasis inside of words, for example no_emph_no
