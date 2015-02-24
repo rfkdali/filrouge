@@ -1,4 +1,5 @@
 class ArticlesController < ActionController::Base
+	layout 'application'
 
 	def index
 		@articles = Article.all
@@ -39,7 +40,7 @@ class ArticlesController < ActionController::Base
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :date, :content, :tag)
+		params.require(:article).permit(:title, :created_at, :content, :tag)
 	end
 
 end
