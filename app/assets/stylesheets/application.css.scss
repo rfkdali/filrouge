@@ -75,49 +75,15 @@ nav a:hover{
 /* Links*/
 a{text-decoration: none;}
 
-/* buttons */
 
-.btn{
-	text-decoration: none;
-	color: #fff;
-	background-color: rgba(22, 66, 114, 0.86);
-	padding: 1.6%;
-	display: inline-block;
-	min-width: 42px;
-}
 
-.add-btn{
-	background-color: #E27A3F;
-	border-radius: 3px;
-	padding: 0.6%;
-}
 
-.del-btn{
-	background-color: #DF5A49;
-	border-radius: 3px;
-	padding: 5px;
-}
 
-.edit-btn{
-	background-color: #45B29D;
-	border-radius: 3px;
-	padding: 5px;
-}
+/*----------*/
 
-.desc-btn{
-	background-color: #164272;
-}
 
-.back-btn{
-	background-color: #E27A3F;
-	display: block;
-	width: 2.5em;
-	margin-top: 2%;
-	padding: 0.5%;
-	border-radius: 3px;
-}
 
-/* -------*/ 
+
 
 h1{
 	color: #333;
@@ -287,7 +253,7 @@ main .no-completed{
 		height: 100px;
 	}
 
-	.goals footer{
+	.goals footer, .index_articles footer{
 		text-align: center;
 	}
 }
@@ -307,9 +273,8 @@ main .no-completed{
 	padding: 0.5em 0;
 }
 
-.goals footer{
+.goals footer, .index_articles footer{
 	position: relative;
-	top: 1em;
 }
 
 

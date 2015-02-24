@@ -1,0 +1,19 @@
+.index_articles{
+	display: inline-block;
+	width: 100%;
+	min-width: 250px;
+	/*margin-top: 5px;*/
+	background-color: #F0F0F0;
+	padding: 1.25%;
+	height: auto;
+}
+
+.articles{
+	background-color: #EAF8FF;
+	padding: 1%;
+	margin-bottom: 1%;
+}
+
+.articles p{
+	padding: 0.5em 0;
+}

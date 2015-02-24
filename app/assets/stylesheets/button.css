@@ -1,0 +1,44 @@
+/* buttons */
+
+.btn{
+	text-decoration: none;
+	color: #fff;
+	background-color: rgba(22, 66, 114, 0.86);
+	padding: 1.6%;
+	display: inline-block;
+	min-width: 42px;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.add-btn{
+	background-color: #E27A3F;
+	padding: 0.6%;
+}
+
+.edit-btn{
+	background-color: #45B29D;
+}
+
+.del-btn{
+	background-color: #DF5A49;
+	padding: 5px;
+}
+
+.desc-btn{
+	background-color: #164272;
+}
+
+.more-btn{
+	background-color: #E27A3F;
+}
+
+.back-btn{
+	background-color: #E27A3F;
+	display: block;
+	width: 2.5em;
+	margin-top: 2%;
+	padding: 0.5%;
+}
+
+/* -------*/ 
