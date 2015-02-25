@@ -40,7 +40,7 @@ class ArticlesController < ActionController::Base
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :created_at, :content, :tag)
+		params.require(:article).permit(:title, :created_at, :content, :tags)
 	end
 
 end

@@ -11,25 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224161353) do
+ActiveRecord::Schema.define(version: 20150225133146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: true do |t|
-    t.string   "title"
+  create_table "articles", force: :cascade do |t|
+    t.string   "title",      limit: 255
     t.time     "date"
     t.text     "content"
-    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tags",                   default: [], array: true
   end
 
-  create_table "goals", force: true do |t|
-    t.string  "title"
-    t.string  "description"
+  create_table "goals", force: :cascade do |t|
+    t.string  "title",       limit: 255
+    t.string  "description", limit: 255
     t.boolean "status"
-    t.string  "category"
+    t.string  "category",    limit: 255
   end
 
 end

@@ -11,7 +11,7 @@
 
 		<p><%= a.created_at.strftime("%d %b %y") %></p>
 		<p><%= articles_content_md_truncated(a) %></p>
-		<p>tag : <%= a.tag %></p>
+		<p>tag : <%= a.tags %></p>
 
 		<footer>
 			<%= link_to 'Lire la suite', a ,{:class => "more-btn btn"}%>

@@ -34,6 +34,7 @@ module ApplicationHelper
 	    disable_indented_code_blocks: true,
 	    # will ignore standard require for empty lines surrounding HTML blocks
 	    lax_spacing:        true,
+	    lax_html_blocks: true,
 	    # will not generate emphasis inside of words, for example no_emph_no
 	    no_intra_emphasis:  true,
 	    # will parse strikethrough from ~~, for example: ~~bad~~
