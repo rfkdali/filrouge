@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.1.rc1'
 gem 'pg'
 
 gem 'redcarpet'
@@ -17,6 +17,4 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails', '~> 1.0.2'
 
-
-gem 'spring',        group: :development
 gem 'fabrication', group: :development
