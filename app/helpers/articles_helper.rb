@@ -8,4 +8,8 @@ module ArticlesHelper
 		truncate(articles_content_md(a), length: 300, :escape => false)
 	end
 
+	def format_tags(tag)
+		tag.map { |e| e.downcase.strip }.join(", ")
+	end
+
 end

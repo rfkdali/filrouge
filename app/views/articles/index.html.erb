@@ -11,12 +11,15 @@
 
 		<p><%= a.created_at.strftime("%d %b %y") %></p>
 		<p><%= articles_content_md_truncated(a) %></p>
-		<p>tag : <%= a.tags %></p>
+
+
+		<p>tag : <%= format_tags(a.tags) %></p>
 
 		<footer>
 			<%= link_to 'Lire la suite', a ,{:class => "more-btn btn"}%>
 			<%= link_to 'éditer', a, {:class => "edit-btn btn"}%>
 		</footer>
+
 		</div>
 		<% end %>
 	
