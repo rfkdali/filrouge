@@ -4,6 +4,8 @@ ruby '2.1.3'
 gem 'rails', '4.2.1.rc1'
 gem 'pg'
 
+gem 'rails_12factor'
+
 gem 'redcarpet'
 
 gem 'sass-rails', '~> 4.0.3'
