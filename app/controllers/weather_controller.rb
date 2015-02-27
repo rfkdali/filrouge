@@ -4,7 +4,6 @@ class WeatherController < ActionController::Base
 	layout 'weather'
 
 	def index
-		
 	end
 
 	def api
@@ -12,6 +11,5 @@ class WeatherController < ActionController::Base
     @data = JSON.load(open(source))
     render json: @data
 	end
-
 
 end

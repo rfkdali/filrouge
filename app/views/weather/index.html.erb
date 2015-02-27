@@ -1,36 +1,13 @@
-<div id="city"></div>
+<div id="weather-config" data-url="<%=  weather_api_path %>"></div>
+
+<h1 id="city"></h1>
+
 <div id="temperature"></div>
 <div id="wind"></div>
-<div id="check"></div>
 
 
 
-<script type="text/javascript">
-function refresh(){
-	$.ajax({
-		url: "/weather/api",
-	}).done(function( data ) {
-		if ( console && console.log ) {
-			console.log( "Sample of data:", data );
-		}
-		paris = {
- 					"city": data.name,
-    			"temperature": parseInt(data.main.temp - 273),
-  				"skystate" : data.weather[0].description,
-    			"windSpeed": data.wind.speed,
-    			"check_refresh": data.dt
-    			};
 
-    	document.getElementById('city').innerHTML = "City = " + paris.city;
-    	document.getElementById('temperature').innerHTML = "Temperature = " + paris.temperature;
-    	document.getElementById('wind').innerHTML = "Wind speed = " + paris.windSpeed;
-    	document.getElementById('check').innerHTML = "Check refresh = " + paris.check_refresh;
-  });
-  window.setTimeout(refresh, 5000);
-}
 
-refresh()
-
-</script>
 
  
