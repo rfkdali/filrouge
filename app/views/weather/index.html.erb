@@ -7,16 +7,12 @@
 
 <script type="text/javascript">
 function refresh(){
-
 	$.ajax({
-		url: "api",
-		})
-		.done(function( data ) {
+		url: "/weather/api",
+	}).done(function( data ) {
 		if ( console && console.log ) {
-		console.log( "Sample of data:", data );
+			console.log( "Sample of data:", data );
 		}
-	
-
 		paris = {
  					"city": data.name,
     			"temperature": parseInt(data.main.temp - 273),
@@ -29,9 +25,8 @@ function refresh(){
     	document.getElementById('temperature').innerHTML = "Temperature = " + paris.temperature;
     	document.getElementById('wind').innerHTML = "Wind speed = " + paris.windSpeed;
     	document.getElementById('check').innerHTML = "Check refresh = " + paris.check_refresh;
-    });
-    window.setTimeout(refresh, 5000);
-
+  });
+  window.setTimeout(refresh, 5000);
 }
 
 refresh()
