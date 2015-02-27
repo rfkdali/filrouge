@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   #weather
   get 'weather' => 'weather#index'
-  get 'result' => 'weather#result'
+  get 'weather/api' => 'weather#api'
 
   #blog
   resources :articles

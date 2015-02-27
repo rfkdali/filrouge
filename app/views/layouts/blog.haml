@@ -1,18 +1,16 @@
 %html{:lang => 'fr'}
   %head
-    //%meta{"HTTP-EQUIV" => "Refresh", "CONTENT" => 5}
-    %meta
     %title
       Filrouge Project
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'weather', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
   %body
     %header
       %h3
-        = link_to "Weather", root_path, id: 'logo'
+        = link_to "Blog", root_path, id: 'logo'
       %nav
         %ul
           %li
@@ -22,8 +20,9 @@
           %li
             = link_to "objectifs terminés", goals_completed_path
           %li
-            = link_to "Météo", weather_path
+            = link_to "Météo", weather_path 
+          %li
+            = link_to "blog", articles_path 
 
     %main
       = yield
-
