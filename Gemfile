@@ -22,4 +22,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails', '~> 1.0.2'
 
-gem 'fabrication', group: :development
+group :development,:test do
+ gem 'fabrication'
+ gem "rspec-rails"
+end
