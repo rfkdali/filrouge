@@ -1,14 +1,8 @@
 class GoalsController < ActionController::Base
-http_basic_authenticate_with name: ENV['APP_USER'], password: ENV['APP_PASS']
-	
 	layout 'application'
 
 	def index
-		@goals = Goal.to_complete
-		if params[:category]
-			@goals = @goals.where(category: params[:category])
-		end
-		@categories = Goal.categories
+		@goals = Goal.all.order('id ASC')
 	end
 
 	def new
@@ -31,10 +25,6 @@ http_basic_authenticate_with name: ENV['APP_USER'], password: ENV['APP_PASS']
 
 	def show
 	  @goals = Goal.find(params[:id])
-	end
-
-	def completed
-		@goals = Goal.completed
 	end
 
 	def update

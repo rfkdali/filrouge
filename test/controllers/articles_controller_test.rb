@@ -1,13 +1,10 @@
 require 'test_helper'
 
-class GoalsControllerTest < ActionController::TestCase
+class ArticlesControllerTest < ActionController::TestCase
 
-	test "index articles" do
-		title = Fabricate(:article, title: 'truc')
-		description = Fabricate(:article, description: 'mouche')
+	test "index" do
 		get :index
 		assert_response :success
-		assert_equal [title], assigns(:articles)
 	end
 
 end
