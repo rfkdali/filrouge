@@ -2,7 +2,7 @@
 
 <div class="articles">	
 	<p><%= @article.content %></p>
-	<p>tag : <%= @article.tags %></p>
+	<p>tag : <%= @article.tag_list %></p>
 </div>
 
 <%= link_to 'éditer', edit_article_path, {:class => "edit-btn btn"} %>
