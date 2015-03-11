@@ -4,10 +4,6 @@ ruby '2.1.3'
 gem 'rails', '4.2.1.rc1'
 gem 'pg'
 
-#scalingo
-gem 'rails_12factor'
-gem 'responders', '~> 2.0'
-
 gem 'redcarpet'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -25,4 +21,9 @@ gem 'dotenv-rails', '~> 1.0.2'
 group :development,:test do
  gem 'fabrication'
  gem "rspec-rails"
+end
+
+group :production do
+ gem 'rails_12factor'
+ gem 'responders', '~> 2.0'
 end
