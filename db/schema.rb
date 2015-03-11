@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225133146) do
+ActiveRecord::Schema.define(version: 20150311162353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20150225133146) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "tags",                   default: [], array: true
   end
 
   create_table "goals", force: :cascade do |t|
@@ -32,4 +31,22 @@ ActiveRecord::Schema.define(version: 20150225133146) do
     t.string  "category",    limit: 255
   end
 
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "taggings", ["article_id"], name: "index_taggings_on_article_id", using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "taggings", "articles"
+  add_foreign_key "taggings", "tags"
 end

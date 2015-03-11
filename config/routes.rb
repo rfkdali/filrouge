@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   
   #blog
   resources :articles
+  resources :tags
 
 end
