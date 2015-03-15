@@ -21,6 +21,12 @@ gem 'dotenv-rails', '~> 1.0.2'
 group :development,:test do
  gem 'fabrication'
  gem "rspec-rails"
+ gem "better_errors"
+ gem "binding_of_caller"
+ gem "quiet_assets"
+ gem "pry-byebug"
+ gem "faker"
+ gem "letter_opener"
 end
 
 group :production do
