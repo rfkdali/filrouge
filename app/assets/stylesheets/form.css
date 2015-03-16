@@ -1,0 +1,42 @@
+@media (max-width: 540px) {
+	input, textarea{width: 100%;}
+	main form {padding: 5% 5px;}
+}
+
+@media (min-width: 541px) {
+	textarea {width: 450px;}
+}
+
+input{
+		border-radius: 3px;
+		margin-bottom: 1em;
+		margin-top: 0.5em;
+		border:0.1px solid #ABE7FF;
+		padding: 0.4em;
+	}
+
+	textarea{
+		border-radius: 3px;
+		margin-bottom: 1em;
+		margin-top: 0.5em;
+		padding: 0.4em;
+		height: 180px;
+	}
+
+	input[type="submit"]{
+		display: block;
+		height: 30px;
+		border: 0px none;
+		color: #fff;
+		padding: 1px;
+		background-color: #FF8328;
+		margin-bottom: 2%;
+	}
+
+	textarea, input{
+		border: 4px solid rgba(171, 231, 255, 0.47)
+	}
+
+	input[type="checkbox"]{
+		width: 58px;
+	}
