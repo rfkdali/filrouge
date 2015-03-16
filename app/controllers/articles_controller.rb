@@ -1,5 +1,5 @@
 class ArticlesController < ActionController::Base
-	layout 'blog'
+	layout 'application'
 
 	def index
 		@articles = Article.all

@@ -10,17 +10,7 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
   %body
-    %header
-      %h3
-        = link_to "Weather", root_path, id: 'logo'
-      %nav
-        %ul
-          %li
-            = link_to "accueil", root_path
-          %li
-            = link_to "objectifs", goals_path
-          %li
-            = link_to "Météo", weather_path
+    =render 'layouts/header'
 
     %main
       = yield

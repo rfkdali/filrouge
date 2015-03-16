@@ -17,3 +17,11 @@
 .articles p{
 	padding: 0.5em 0;
 }
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 540px) {
+	.index_articles, .articles {padding: 0;}	
+}
+/* END MEDIA QUERIES */
