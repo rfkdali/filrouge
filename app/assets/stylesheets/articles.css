@@ -1,27 +1,31 @@
+@media (max-width: 540px) {
+	h1,h2,h3,h4 {text-align: center;}
+	.index_articles, .articles {padding: 0;}
+	.articles{
+		padding: 5% 0;
+		border: 1px solid #AEDAFF;
+	}
+}
+
+@media (min-width: 541px) {
+	.index_articles, .articles {padding: 1.25%}
+}
+
 .index_articles{
 	display: inline-block;
 	width: 100%;
 	min-width: 250px;
 	/*margin-top: 5px;*/
 	background-color: #F0F0F0;
-	padding: 1.25%;
 	height: auto;
 }
 
 .articles{
 	background-color: #EAF8FF;
-	padding: 1%;
-	margin-bottom: 1%;
+	margin: 2% 0;
+	borde: 1px solid #333;
 }
 
 .articles p{
 	padding: 0.5em 0;
 }
-
-
-/* MEDIA QUERIES */
-
-@media (max-width: 540px) {
-	.index_articles, .articles {padding: 0;}	
-}
-/* END MEDIA QUERIES */

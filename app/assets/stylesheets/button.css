@@ -1,4 +1,21 @@
-/* buttons */
+@media (max-width: 540px) {
+	.add-btn{
+		width: 100%;
+	}
+
+	.back-btn{
+		width: 100%;
+		text-align: center;
+		padding: 5%;
+		font-size: 1.2em;
+	}
+}
+
+@media (min-width: 541px) {
+	textarea {width: 450px;}
+	.back-btn{width: 2.5em;}
+}
+
 
 .btn{
 	text-decoration: none;
@@ -36,9 +53,5 @@
 .back-btn{
 	background-color: #E27A3F;
 	display: block;
-	width: 2.5em;
 	margin-top: 2%;
-	padding: 0.5%;
 }
-
-/* -------*/ 
